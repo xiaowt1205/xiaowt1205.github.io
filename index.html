@@ -378,6 +378,15 @@
             display: block;
         }
 
+        .gameListImgctrl {
+            margin-bottom: 20px;
+        }
+
+        .gameListImgctrl:hover {
+            border: 4px solid #0064FF;
+            border-radius: 2px;
+        }
+
         .Cover {
             position: absolute;
             width: 100%;
@@ -387,6 +396,12 @@
             padding: 100px 0;
             display: none;
             background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .S4_collpase{
+            width: 100%;
+            height: 500px;
+            background-color: #000C1E;
         }
 
         /* section4 */
@@ -663,7 +678,8 @@
         <!-- section2 -->
         <div class="introdution">
             <div class="main">
-                <div class="introdutionBox" style="margin-right: 282px;">
+                <div class="introdutionBox" style="margin-right: 282px;" data-aos="fade-up"
+                data-aos-duration="1000">
                     <h2 style="color: #0064FF">何謂電競</h2>
                     <span style="color: #0064FF">電子競技(英語：eSports)是指利用電子設備</span>
                     <span style="color: #0064FF">(電腦、遊戲主機、街機)作為運動器械進行的、但是操作上強調人與人之間的
@@ -673,11 +689,12 @@
                     <span style="color: #0064FF">隨著遊戲對經濟、社會的影響力不斷壯大，電子競技正式成為體育競技的一種。
                     </span>
                 </div>
-                <div class="introdutionBox introdution_logo">
+                <div class="introdutionBox introdution_logo" >
                     <img src="img/Logo.png" alt="" style="max-width: 175px;">
                     <p>關注電競，選擇競彩</p>
                 </div>
-                <div class="introdutionBox" style="margin-right: 290px;">
+                <div class="introdutionBox" style="margin-right: 290px;"data-aos="fade-up"
+                data-aos-duration="1000">
                     <h2 style="color: #0064FF">電競彩券</h2>
                     <span style="color: #0064FF">電競這種新興的產業前途無量，不僅帶動了許多廠商的支持，也培養出更多的
                     </span>
@@ -688,7 +705,7 @@
                     <span style="color: #0064FF">現實生活的站內虛擬貨幣進行賭局，為的就是讓更多人明白”電子競技”這一回事。
                     </span>
                 </div>
-                <div class="introdutionBox introdution_QRcode">
+                <div class="introdutionBox introdution_QRcode" >
                     <img src="img/QR code.png" alt="" style="max-width: 175px;">
                     <p style="font-size: 24px">手機下注QR code</p>
                 </div>
@@ -699,16 +716,20 @@
     <!-- section3 -->
     <div class="all" style="background-color: #001432;">
         <div class="main" style="background-color: #001432;padding: 50px 0;">
-            <div class="S3_box" style="margin-right:223px; background-color: #0064FF"></div>
-            <div class="S3_box" style="width: 35%;">
+            <div class="S3_box" style="margin-right:223px; background-color: #0064FF" data-aos="fade-up"
+            data-aos-duration="1000"></div>
+            <div class="S3_box" style="width: 35%;" data-aos="fade-up"
+            data-aos-duration="1000">
                 <h2 style="color: #FFAA00;">選擇賽事內容</h2>
                 <div class="S3_text">
                     <p>本站提供多元的賽事內容!</p>
                     <p>選擇你所支持的遊戲/賽事。</p>
                 </div>
             </div>
-            <div class="S3_box" style="margin-right:223px; background-color: #005CE2"></div>
-            <div class="S3_box" style="width: 35%;">
+            <div class="S3_box" style="margin-right:223px; background-color: #005CE2" data-aos="fade-up"
+            data-aos-duration="1000"></div>
+            <div class="S3_box" style="width: 35%;" data-aos="fade-up"
+            data-aos-duration="1000">
                 <h2 style="color: #FFAA00;">決定投注項目</h2>
                 <div class="S3_text">
                     <p>多項好玩的投注內容!</p>
@@ -717,10 +738,12 @@
                     <span>投注金額以1000為單位</span>
                 </div>
             </div>
-            <div class="S3_box" style="margin-right:223px; background-color: #0058AF"></div>
-            <div class="S3_box" style="width: 35%; padding: 10px 0">
+            <div class="S3_box" style="margin-right:223px; background-color: #0058AF" data-aos="fade-up"
+            data-aos-duration="1000"></div>
+            <div class="S3_box" style="width: 35%; padding: 10px 0" data-aos="fade-up"
+            data-aos-duration="700">
                 <h2 style="color: #FFAA00;">全心投入賽事</h2>
-                <div class="S3_text">
+                <div class="S3_text" >
                     <p>準備迎接精彩賽事!</p>
                     <p>觀看賽事直播，用行動支持你喜</p>
                     <p>歡的賽事內容。</p>
@@ -730,40 +753,185 @@
         </div>
         <div class="clear"></div>
         <div class="borderLine"></div>
-<!-- 我做到這裡了喔喔喔喔喔喔喔喔 Modal跑不出來QQ -->
+
+
         <!-- section4 -->
-        <div class="main" style="background-color: #001432;padding: 50px 0px;">
+        <div class="main" style="background-color: #001432;padding: 50px 0px;" >
             <div class="selectGame">
                 <h1 style="color: #FFAA00;margin-bottom: 50px">選擇賽事內容</h1>
                 <div class="selectBox">
                     <div id="S4_LOL_ID" class="S4_LOL imgCtrl">
                         <a href="" data-toggle="modal" data-target="#gameList_LOL">
+                            <!-- gameList modal START -->
+
+                            <div class="modal fade" id="gameList_LOL" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="modal-title" style="color: #FFAA00"> 選擇賽事場次</h2>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="gameListImgctrl">
+                                                <img src="img/selectbtn/select_LOL_1.png" alt="" style="max-width: 100%;">
+                                            </div>
+                                            <div class="gameListImgctrl">
+                                                <img src="img/selectbtn/select_LOL_2.png" alt="" style="max-width: 100%;">
+                                            </div>
+                                            <div class="gameListImgctrl">
+                                                <img src="img/selectbtn/select_LOL_3.png" alt="" style="max-width: 100%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- gameList modal END -->
+
                             <div class="Cover">
                                 <img src="img/S4/S4_hover/lol_hover.png" alt="" style="max-width: 100%;">
                             </div>
                         </a>
                     </div>
+
                     <div class="S4_PUBG imgCtrl">
-                        <div class="Cover">
-                            <img src="img/S4/S4_hover/pubg_hover.png" alt="" style="max-width: 100%;">
-                        </div>
+                        <a href="" data-toggle="modal" data-target="#gameList_PUBG">
+                            <!-- gameList modal START -->
+
+                            <div class="modal fade" id="gameList_PUBG" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="modal-title" style="color: #FFAA00"> 選擇賽事場次</h2>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="gameListImgctrl">
+                                                <img src="img/selectbtn/select_PUBG_1.png" alt="" style="max-width: 100%;">
+                                            </div>
+                                            <div class="gameListImgctrl">
+                                                <img src="img/selectbtn/select_PUBG_2.png" alt="" style="max-width: 100%;">
+                                            </div>
+                                            <div class="gameListImgctrl">
+                                                <img src="img/selectbtn/select_PUBG_3.png" alt="" style="max-width: 100%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- gameList modal END -->
+                            <div class="Cover">
+                                <img src="img/S4/S4_hover/pubg_hover.png" alt="" style="max-width: 100%;">
+                            </div>
                     </div>
+
                     <div class="S4_DOTA2 imgCtrl">
-                        <div class="Cover">
-                            <img src="img/S4/S4_hover/dota2_hover.png" alt="" style="max-width: 100%;">
-                        </div>
+                        <a href="" data-toggle="modal" data-target="#gameList_DOTA2">
+                            <!-- gameList modal START -->
+
+                            <div class="modal fade" id="gameList_DOTA2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="modal-title" style="color: #FFAA00"> 選擇賽事場次</h2>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="gameListImgctrl">
+                                                <img src="img/selectbtn/select_DOTA2_1.png" alt="" style="max-width: 100%;">
+                                            </div>
+                                            <div class="gameListImgctrl">
+                                                <img src="img/selectbtn/select_DOTA2_2.png" alt="" style="max-width: 100%;">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- gameList modal END -->
+
+                            <div class="Cover">
+                                <img src="img/S4/S4_hover/dota2_hover.png" alt="" style="max-width: 100%;">
+                            </div>
                     </div>
+
                     <div class="S4_R6 imgCtrl">
-                        <div class="Cover">
-                            <img src="img/S4/S4_hover//r6_hover.png" alt="" style="max-width: 100%;">
-                        </div>
+                        <a href="" data-toggle="modal" data-target="#gameList_R6">
+                            <!-- gameList modal START -->
+
+                            <div class="modal fade" id="gameList_R6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="modal-title" style="color: #FFAA00"> 選擇賽事場次</h2>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="gameListImgctrl">
+                                                <img src="img/selectbtn/select_R6_1.png" alt="" style="max-width: 100%;">
+                                            </div>
+                                            <div class="gameListImgctrl">
+                                                   
+                                                <img src="img/selectbtn/select_R6_2.png" alt="" style="max-width: 100%;">
+                                           
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- gameList modal END -->
+
+                            <div class="Cover">
+                                <img src="img/S4/S4_hover//r6_hover.png" alt="" style="max-width: 100%;">
+                            </div>
+
                     </div>
                     <div class="S4_HS imgCtrl">
-                        <div class="Cover">
-                            <img src="img/S4/S4_hover/hs_hover.png" alt="" style="max-width: 100%;">
-                        </div>
+                        <a href="" data-toggle="modal" data-target="#gameList_HS">
+                            <!-- gameList modal START -->
+
+                            <div class="modal fade" id="gameList_HS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="modal-title" style="color: #FFAA00"> 選擇賽事場次</h2>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="gameListImgctrl">
+                                                <img src="img/selectbtn/select_HS_1.png" alt="" style="max-width: 100%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- gameList modal END -->
+                            <div class="Cover">
+                                <img src="img/S4/S4_hover/hs_hover.png" alt="" style="max-width: 100%;">
+                            </div>
                     </div>
                 </div>
+                <!-- collapse start -->
+                
+                <div class="collapse " id="collapseExample">
+                        <div class="S4_collpase" style="font-size: 50px">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        </div>
+                </div>
+            
+                  <!-- collapse end -->
+           
+           
             </div>
         </div>
         <!-- section5 -->
@@ -870,28 +1038,7 @@
             </div>
             <!-- login modal -->
 
-            <!-- gameList modal START -->
 
-            <div class="modal fade" id="gameList_LOL" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      .123123123
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <!-- gameList modal END -->
 
         </div>
 
@@ -900,7 +1047,7 @@
 
         </div>
 
-        
+
 
 
 
