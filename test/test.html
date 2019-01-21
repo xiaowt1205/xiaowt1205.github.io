@@ -37,6 +37,7 @@
     var endY = 0;
 
     window.addEventListener('touchstart', function (event) {
+        event.preventDefault()
         var touch = event.targetTouches[0];
         //紀錄觸控起始點
         startY = touch.pageY;
@@ -44,6 +45,7 @@
 
     }, false)
     window.addEventListener('touchmove', function (event) {
+        event.preventDefault()
         var touch = event.targetTouches[0];
         //紀錄觸控起終點
         endY = touch.pageY;
@@ -51,6 +53,7 @@
 
     }, false)
     window.addEventListener('touchend', function (event) {
+        event.preventDefault()
         //終點 - 起點 = 距離   < 10 = 向上滑動如果大於10單位
         if (endY - startY < 10) {
             console.log("偵測到向上滑動");
