@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,21 @@
     <title>Document</title>
 
     <style>
-    
-    #obj{
-        position: relative;
-        width: 200px;
-        height: 200px;
-        background-color: red;
-        left: 0px;
-        top: 0px;
-    }
+        #obj {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            left: 0px;
+            top: 0px;
+        }
 
+        .color {
+            background-color: red;
+        }
     </style>
 </head>
+
 <body>
     <div id="obj"></div>
 </body>
@@ -26,20 +30,33 @@
 
 
 <script>
-var obj = document.getElementById("obj")
-obj.addEventListener('touchmove', function(event) 
-{ // 如果這個元素的位置內只有一個手指的話
-if (event.targetTouches.length == 1) 
-{   
-    console.log("1");
-    
-var touch = event.targetTouches[0];
-// 把元素放在手指所在的位置
-console.log(touch);
-obj.style.left = touch.pageX;
-obj.style.top = touch.pageY;
-}
-}, false);
+    //滑動起點與終點
+    var startY =0;
+    var endY = 0;
 
+    window.addEventListener('touchstart',function(event){
+        var touch = event.targetTouches[0];
+        //紀錄觸控起始點
+        startY = touch.pageY;
+        console.log("起始點:"+startY);
+        
+    },false)
+    window.addEventListener('touchmove',function(event){
+        var touch = event.targetTouches[0];
+        //紀錄觸控起終點
+        endY = touch.pageY;
+        console.log("滑動距離:"+endY);
+        
+    },false)
+    window.addEventListener('touchend',function(event){
+        // var touch = event.targetTouches[0];
+        endY = touch.pageY;
+        console.log(endY);
+        
+        
+    },false)
+  
+   
 </script>
+
 </html>
