@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>教育部國教署交通安全教育資訊網</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/TM-page.css">
+</head>
+
+<body>
+    <!-- navbar start -->
+    <nav class="bg">
+        <div class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo">
+                        <img src="/img/LOGO.png" alt="教育部國教署Logo">
+                        <div>
+                            <h2>教育部國教署</h2>
+                            <h1>交通安全教育資訊網</h1>
+                        </div>
+                    </div>
+                </a>
+                <div class="navbar-toggler" type="" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""><i class="fas fa-bars"></i></span>
+                </div>
+                <div class="navbar-search-icon"><i class="fas fa-search"></i></div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="sub_nav" class="navbar-nav ml-auto d-none d-lg-flex">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-sitemap"></i>
+                                網站導覽
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="nav_small_text_btn" class="nav-link btn" data-fontsize="0.825">小</button>
+                        </li>
+                        <li class="nav-item active">
+                            <button id="nav_normal_text_btn" class="nav-link btn active"
+                                data-fontsize="0.875">中</button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="nav_big_text_btn" class="nav-link btn" data-fontsize="0.925">大</button>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav_search_form">
+                                <form class="my-2 my-lg-0">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="熱門搜尋:騎車安全、過馬路..."
+                                        aria-label="Search">
+                                    <i class="fas fa-search"></i>
+                                </form>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <ul id="main_nav" class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutUs.html" title="主導覽列-關於我們">關於我們</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="TM-info.html" title="主導覽列-教材資訊">教材資訊</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="TM-share.html" title="主導覽列-教材分享">教材分享</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html" title="主導覽列-新訊與政令">新訊與政令</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="QA.html" title="主導覽列-QA專區">QA專區</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-sitemap"></i>
+                                網站導覽
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    
+    <!-- content start -->
+    <article class="TM-content page-padding">
+        <div class="container">
+            <section class="row nowPage-info justify-content-between">
+                <div class="col-lg-6">
+                    <p>教材分享</p>
+                    <span><a href="index.html">首頁</a> > 教材分享 </span>
+                </div>
+                <div class="col-lg-6">
+                    <img class="" src="img/TM-info/kids.png" alt="">
+                </div>
+            </section>
+            <section class="row filter-bar-pc justify-content-center d-none d-lg-flex">
+                <div class="filter-select-block">
+                    <a href="#">最新上傳</a>
+                </div>
+                <div class="filter-select-block">
+                    <a href="#">最多點閱</a>
+                </div>
+                <div class="filter-select-block">
+                    <span>主題分類 : </span>
+                    <select value="選擇交通工具">
+                        <option name="" id="">電動自行車</option>
+                        <option name="" id="">摩托車</option>
+                        <option name="" id="">汽車</option>
+                    </select>
+                </div>
+                <div class="filter-select-block">
+                    <span>教學學年 : </span>
+                    <select value="選擇年級">
+                        <option name="" id="">幼兒園</option>
+                        <option name="" id="">國小</option>
+                        <option name="" id="">國中</option>
+                        <option name="" id="">高中職</option>
+                    </select>
+                </div>
+                <div class="filter-select-block">
+                    <div class="upload-TM">上傳教材&nbsp; <i class="fas fa-file-upload"></i></div>
+                </div>
+            </section>
+            <section class="row filter-bar-mobile">
+                <!-- 排序方式 -->
+                <div class="col-12 mb-3">
+                    <a class="w-100" data-toggle="collapse" href="#filter-collapse-1" aria-expanded="false"
+                        aria-controls="filter-collapse-1">
+                        <div class="filter-collapse-title d-flex justify-content-between">排序方式
+                            <div class="arrow-icon"><img class="w-100" src="img/TM-info/arrow.svg" alt=""></div>
+                        </div>
+                    </a>
+                    <div class="w-100">
+                        <div class="collapse multi-collapse" id="filter-collapse-1">
+                            <div class="card card-body">
+                                <div class="filter-option">依上傳時間</div>
+                                <div class="filter-option">依點閱人數</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 主題分類 -->
+                <div class="col-12 mb-3">
+                    <a class="w-100" data-toggle="collapse" href="#filter-collapse-2" aria-expanded="false"
+                        aria-controls="filter-collapse-2">
+                        <div class="filter-collapse-title d-flex justify-content-between">主題分類
+                            <div class="arrow-icon"><img class="w-100" src="img/TM-info/arrow.svg" alt=""></div>
+                        </div>
+                    </a>
+                    <div class="w-100">
+                        <div class="collapse multi-collapse" id="filter-collapse-2">
+                            <div class="card card-body">
+                                <div class="filter-option">電動自行車</div>
+                                <div class="filter-option">摩托車</div>
+                                <div class="filter-option">汽車</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 教學學年 -->
+                <div class="col-12 mb-3">
+                    <a class="w-100" data-toggle="collapse" href="#filter-collapse-3" aria-expanded="false"
+                        aria-controls="filter-collapse-3">
+                        <div class="filter-collapse-title d-flex justify-content-between">教學學年
+                            <div class="arrow-icon"><img class="w-100" src="img/TM-info/arrow.svg" alt=""></div>
+                        </div>
+                    </a>
+                    <div class="w-100">
+                        <div class="collapse multi-collapse" id="filter-collapse-3">
+                            <div class="card card-body">
+                                <div class="filter-option">幼兒園</div>
+                                <div class="filter-option">國小</div>
+                                <div class="filter-option">國中</div>
+                                <div class="filter-option">高中職</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 上傳教材 -->
+                <div class="col-12">
+                    <a href="#">
+                        <div class="upload-TM">上傳教材&nbsp; <i class="fas fa-file-upload"></i></div>
+                    </a>
+                </div>
+            </section>
+            <section class="content-info flex-wrap justify-content-center">
+                <div class="row">
+                    <div class="col-lg-4 col-12 order-1 order-lg-1">
+                        <div class="content-info-block w-100"
+                            style="background-image: url('/img/TM-info/theme-pic-1.jpg');" data-toggle="collapse"
+                            href="#collapse-1" aria-expanded="false">
+                            <div class="mask">
+                                <p>騎車安全配套-1</p>
+                                <span>下載次數 : 9,999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 order-3 order-lg-2">
+                        <div class="content-info-block w-100"
+                            style="background-image: url('/img/TM-info/theme-pic-2.jpg');" data-toggle="collapse"
+                            href="#collapse-2" aria-expanded="false">
+                            <div class="mask">
+                                <p>腳踏車如何禮讓行人-1</p>
+                                <span>下載次數 : 9,999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 order-5 order-lg-3">
+                        <div class="content-info-block w-100"
+                            style="background-image: url('/img/TM-info/theme-pic-1.jpg');" data-toggle="collapse"
+                            href="#collapse-3" aria-expanded="false">
+                            <div class="mask">
+                                <p>騎車安全配套-2</p>
+                                <span>下載次數 : 9,999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 order-2 order-lg-4">
+                        <div class="collapse left" id="collapse-1">
+                            <div class="extent-block d-flex">
+                                <div class="col-12 col-lg-5 download d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">下載:</div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-edit"></i><br>
+                                        <span>評量</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-paste"></i><br>
+                                        <span>教材</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-scroll"></i><br>
+                                        <span>講義</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-7 share d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">分享:</div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-line"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 order-4 order-lg-5">
+                        <div class="collapse mid" id="collapse-2">
+                            <div class="extent-block d-flex">
+                                <div class="col-12 col-lg-5 download d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">下載:</div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-edit"></i><br>
+                                        <span>評量</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-paste"></i><br>
+                                        <span>教材</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-scroll"></i><br>
+                                        <span>講義</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-7 share d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">分享:</div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-line"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 order-6 order-lg-6">
+                        <div class="collapse right" id="collapse-3">
+                            <div class="extent-block d-flex">
+                                <div class="col-12 col-lg-5 download d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">下載:</div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-edit"></i><br>
+                                        <span>評量</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-paste"></i><br>
+                                        <span>教材</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-scroll"></i><br>
+                                        <span>講義</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-7 share d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">分享:</div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-line"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-12 order-1 order-lg-1">
+                        <div class="content-info-block w-100"
+                            style="background-image: url('/img/TM-info/theme-pic-2.jpg');" data-toggle="collapse"
+                            href="#collapse-4" aria-expanded="false">
+                            <div class="mask">
+                                <p>腳踏車如何禮讓行人-2</p>
+                                <span>下載次數 : 9,999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 order-3 order-lg-2">
+                        <div class="content-info-block w-100"
+                            style="background-image: url('/img/TM-info/theme-pic-1.jpg');" data-toggle="collapse"
+                            href="#collapse-5" aria-expanded="false">
+                            <div class="mask">
+                                <p>騎車安全配套-3</p>
+                                <span>下載次數 : 9,999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 order-5 order-lg-3">
+                        <div class="content-info-block w-100"
+                            style="background-image: url('/img/TM-info/theme-pic-2.jpg');" data-toggle="collapse"
+                            href="#collapse-6" aria-expanded="false">
+                            <div class="mask">
+                                <p>腳踏車如何禮讓行人-3</p>
+                                <span>下載次數 : 9,999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 order-2 order-lg-4">
+                        <div class="collapse left" id="collapse-4">
+                            <div class="extent-block d-flex ">
+                                <div class="col-12 col-lg-5 download d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">下載:</div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-edit"></i><br>
+                                        <span>評量</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-paste"></i><br>
+                                        <span>教材</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-scroll"></i><br>
+                                        <span>講義</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-7 share d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">分享:</div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-line"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 order-4 order-lg-5">
+                        <div class="collapse mid" id="collapse-5">
+                            <div class="extent-block d-flex">
+                                <div class="col-12 col-lg-5 download d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">下載:</div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-edit"></i><br>
+                                        <span>評量</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-paste"></i><br>
+                                        <span>教材</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-scroll"></i><br>
+                                        <span>講義</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-7 share d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">分享:</div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-line"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 order-6 order-lg-6">
+                        <div class="collapse right" id="collapse-6">
+                            <div class="extent-block d-flex">
+                                <div class="col-12 col-lg-5 download d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">下載:</div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-edit"></i><br>
+                                        <span>評量</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-paste"></i><br>
+                                        <span>教材</span>
+                                    </div>
+                                    <div class="download-btn">
+                                        <i class="fas fa-scroll"></i><br>
+                                        <span>講義</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-7 share d-flex justify-content-between flex-wrap">
+                                    <div class="title w-100">分享:</div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-line"></i>
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+    <!-- content end -->
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="sub-footer d-lg-none left-block">
+            <div class="d-flex justify-content-center">
+                <img src="/img/LOGO.png" alt="教育部國教署Logo">
+                <div class="text-block">
+                    <span>教育部國教署</span>
+                    <p>交通安全教育資源網</p>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 d-none d-lg-block left-block">
+                        <img src="/img/LOGO.png" alt="教育部國教署Logo">
+                        <p>教育部國教署</p>
+                        <p>交通安全教育資源網</p>
+                    </div>
+                    <div class="col-lg-5  mid-block">
+                        <p>連絡電話 : 0800-000-000</p>
+                        <p>傳真號碼 : (02) 1234-4321</p>
+                        <p>地址 : 41341臺中市霧峰區中正路738之4號</p>
+                        <div class="d-none d-lg-block">
+                            <a href="#">隱私與資訊安全政策</a>
+                            <a href="#">網站資料開放宣告</a><br>
+                            <span>交通安全教育資源網</span><span>©2019 copyrights. All Rights Reserved</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  right-block">
+                        <span>更新日期 : 2019-10-10</span><br>
+                        <span>網站來訪人數 : 123,456,789</span>
+                        <div class="d-lg-none">
+                            <a href="#">隱私與資訊安全政策</a>
+                            <a href="#">網站資料開放宣告</a><br>
+                            <span>交通安全教育資源網</span><br>
+                            <span>©2019 copyrights. All Rights Reserved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+        integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P"
+        crossorigin="anonymous"></script>
+    <script src="js/TM_page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+body{
+    background-image: url('/img/background.svg');
+    background-size: cover;
+}
+article.index-content{
+    margin:80px 0;
+
+    @media (max-width:991px){
+        margin:0;
+    }
+
+    .container{
+        .row{
+            font-size: 22px;
+            text-align: center;
+            font-weight: 900;
+
+            .left-block{
+                @media (max-width:991px){
+                       margin-bottom: 35px;
+                }
+                .col-6{
+                    margin-top: 20px;
+                    &:nth-child(odd){
+                        padding-right: 0;
+                    }
+                    &:nth-child(even){
+                        padding-left: 0;
+                    }
+                    .w-100{
+                        height: 250px;
+                    }
+
+                    @media (max-width:991px){
+                        margin-top: 35px;
+                        .w-100{
+                            height: 200px;
+                        }
+                    }
+                    @media (max-width:576px){
+                        .w-100{
+                            height: 180px;
+                        }
+                    }
+                }
+            }
+
+            .right-block{
+                .col-12{
+                    margin-top: 20px;
+                    border-radius: 5px;
+                    background-color: #11476D;
+                    padding: 15px 10px;
+
+                    .info-block{
+                        margin-bottom: 20px;
+                        
+                        &:hover{
+                            .border-side{
+                                .info-content{
+                                    background-color: #F28B44;
+                                    p{
+                                        color: white;
+                                    }
+                                    div{
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .border-side{
+                            width: 100%;
+                            // height: 100px;
+                            border-radius: 5px;
+                            background-color: #EFB086;
+                            padding: 0 4px 4px 0;
+                            .info-content{
+                                width: 99%;
+                                // height: 97%;
+                                border-radius: 5px;
+                                background-color: white;
+                                text-align: left;
+                                padding: 5px;
+                                transition: .3s;
+
+                                @media (max-width:991px){
+                                    padding: 10px 20px;
+                                }
+                                p{
+                                    margin: 0;
+                                    transition: .3s;
+
+                                }
+                                div{
+                                    transition: .3s;
+                                    font-size: 16px;
+                                    overflow : hidden;
+                                    text-overflow : ellipsis;
+                                }
+                            }
+                        }
+                    }
+
+                    .more-btn{
+                        text-align: right;
+                        margin-top: 50px;
+                    }
+                }
+
+                @media (max-width:991px){
+                    background-color: #11476D;
+                    width: 100vw;
+                    
+                    span.title{
+                        color: white;
+                        border-bottom: 2px solid white;   
+                    }
+                }
+            }
+
+            span.title{
+                display: inline-block;
+                padding:0 0 8px 0;
+                width: 100%;
+                border-bottom: 2px solid black;     
+            }
+
+            @media (max-width:991px){
+                span.title{
+                    color: black;
+                    padding:45px 0 35px 0;
+                    font-size: 32px;
+                    font-weight: 900;
+                    border-bottom: 2px solid black; 
+                }
+            } 
+        }
+    }
+}
+
