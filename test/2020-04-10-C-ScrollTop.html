@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollTop</title>
+
+    <style>
+        body{
+            height: 2000px;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .GoToTop{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 24px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            transition: .5s;
+            opacity: 0;
+            /* display: none; */
+        }
+
+        .GoToTop.active{
+            opacity: 1;
+
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="GoToTop">回到最上</div>
+    <script>
+        var gtt = document.querySelector('.GoToTop')
+        window.onscroll = function(){
+
+            // Safari
+            // console.log(document.body.scrollTop);
+
+            // Gooogle Chrome
+            // console.log(document.documentElement.scrollTop);
+
+            var nowScrollTop_safari = document.body.scrollTop
+            var nowScrollTop_google = document.documentElement.scrollTop
+            // console.log(nowScrollTop);
+            
+            if(nowScrollTop_safari > 200  || nowScrollTop_google >200){
+                gtt.classList.add('active')
+            }else{
+                gtt.classList.remove('active')
+            }
+        }
+
+
+        gtt.onclick = function(){
+            document.documentElement.scrollTop = 0
+            document.body.scrollTop = 0
+        }
+
+
+    </script>
+</body>
+</html>
