@@ -41,6 +41,9 @@
         .test:hover{
             background-color: black;
         }
+        .test.active{
+            background-color: black;
+        }
     </style>
 </head>
 
@@ -95,6 +98,10 @@
             }
         }
 
+        var test =document.querySelector('.test')
+        test.onclick = function(){
+            test.classList.add('active')
+        }
 
     </script>
 </body>
