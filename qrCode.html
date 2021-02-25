@@ -12,10 +12,11 @@
 <body>
     <div style="width: 500px" id="reader"></div>
 
+    <p id="text"></p>
 
     <script>
         function onScanSuccess(qrCodeMessage) {
-            // handle on success condition with the decoded message
+            document.querySelector("#text").innerHTML = qrCodeMessage;
         }
 
         var html5QrcodeScanner = new Html5QrcodeScanner(
