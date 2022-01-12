@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(206, 206, 206);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .canvas {
+            min-width: 600px;
+            height: 400px;
+            background-color: rgb(255, 212, 121);
+            border: 5px solid rgb(141, 141, 141);
+            border-radius: 12px;
+            padding: 25px 60px;
+        }
+
+        .canvas h1 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 60px;
+        }
+
+        .canvas p {}
+
+        .canvas input {
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            margin-bottom: 60px;
+        }
+
+        .canvas button {
+            display: block;
+            margin: auto;
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="canvas">
+            <h1>電子看板編輯器</h1>
+            <p>輸入顯示資訊</p>
+            <input id="val" type="text">
+            <button id="commit">送出</button>
+        </div>
+    </main>
+    
+
+
+    <script src="//code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        var uri = "https://script.google.com/macros/s/AKfycbyEsdl98Niia1ufm1y_LSMmwBI22HSrQ8wUgAW-6tuqLhNAp9WP_nki7zbaKXqcjVka/exec";
+
+        $("#commit").click(function () {
+            $.ajax({
+                type: "post",
+                url: uri,
+                data: {
+                    "method": 'write',
+                    "msg": $("#val").val(),
+                },
+                success: function (response) {
+                    if (response == "成功") {
+                        alert("成功::::" + no);
+                    }
+                }
+            });
+            
+        })
+
+
+
+
+
+        // fetch(uri, {
+        //     method: 'POST',
+        //     body: encodeURI(JSON.stringify({
+        //         name: 'oxxo',
+        //     })),
+        //     headers: {
+        //         'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
+        //     }
+        // })
+        //     .then(res => {
+        //         return res.json();   // 使用 json() 可以得到 json 物件
+        //     }).then(result => {
+        //         console.log(result); // 得到 {name: "oxxo", age: 18, text: "你的名字是 oxxo，年紀 18 歲～"}
+        //     });
+
+    </script>
+</body>
+
+</html>
